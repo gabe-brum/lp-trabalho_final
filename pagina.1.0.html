@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SuperMarket Online</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="js/JS.js"></script>
+</head>
+
+<body>
+
+
+    <header>
+        <div id="menu">
+            <a href="pagina.1.0.html"> <img id="img1" src="img/logo site jeff.png" alt="logo"></a>
+
+
+            <ul>
+                <li id="list_menu"> <a class="list_menu_a" href="cadastrar1.0.html">Cadastrar</a></li>
+                <li id="list_menu"> <a class="list_menu_a" href="ajuda.html">Sobre Nos</a></li>
+            </ul>
+            <a onclick="carrinho()" href="carrinho.html"><img id="car_log" src="img/cesta.png"></a>
+        </div>
+
+
+    </header>
+
+    <main>
+
+        <div class="menu_lat">
+
+            <section>
+                <img class="img_menu_lat" src="img/menu.png" alt="categorias">
+                <ul>
+                    <a href="#">
+                        <li class="list_lat">Alimentos Básicos</li>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <li class="list_lat">Hortifrúti</li>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <li class="list_lat">Carnes e Frutos do Mar</li>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <li class="list_lat">Bebidas</li>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <li class="list_lat">Limpeza</li>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <li class="list_lat">Higiene, Saúde e Beleza</li>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <li class="list_lat">Matinais</li>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <li class="list_lat">Bazar</li>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <li class="list_lat">Outros</li>
+                    </a>
+                </ul>
+                <img class="img_menu_lat" src="img/menua.png" alt="">
+                <ul>
+                    <a href="#" target="_blank">
+                        <li class="list_lat">Walmart</li>
+                    </a>
+                    <hr>
+                    <a href="https://www.atacadao.com.br/" target="_blank">
+                        <li class="list_lat">Atacadão</li>
+                    </a>
+                    <hr>
+                    <a href="#" target="_blank">
+                        <li class="list_lat">Rissul</li>
+                    </a>
+                    <hr>
+                    <a href="#" target="_blank">
+                        <li class="list_lat">Rede Forte</li>
+                    </a>
+                    <hr>
+                    <a href="#" target="_blank">
+                        <li class="list_lat">Vila Regina</li>
+                    </a>
+
+                </ul>
+            </section>
+        </div>
+
+
+        <div class="prd">
+
+
+            <section>
+
+                <div id="prod1" class="border_prod">
+                    <img class="img_prod" src="img/cafe.png" alt="">
+                    <h2 class="titulo">Café Melitta 250g</h2>
+                    <div class="prd_pre">R$: 12,59</div>
+                    <img onclick="AddCarrinho('Café Melitta 250g', '12.59', 48)" src="img/aa.png" class="comprar">
+                </div>
+            </section>
+
+            <section>
+                <div class="border_prod">
+                    <img class="img_prod" src="img/chetoos.png" alt="">
+                    <h2 class="titulo">Cheetos 90g</h2>
+                    <div class="prd_pre">R$: 3,98</div>
+                    <img onclick="AddCarrinho('Cheetos 90g', '3.98', 49)" src="img/aa.png" alt="" class="comprar">
+                </div>
+            </section>
+
+            <section>
+                <div class="border_prod">
+                    <img class="img_prod" src="img/choc.png" alt="">
+                    <h2 class="titulo">Choco. Nestle 110g</h2>
+                    <div class="prd_pre">R$: 4,98</div>
+                    <img type="button" onclick="AddCarrinho('Choco. Nestle 110g', '4.98', 50)" src="img/aa.png" alt="" class="comprar">
+                </div>
+            </section>
+
+            <section>
+                <div class="border_prod">
+                    <img class="img_prod" src="img/sucri.jpg" alt="">
+                    <h2 class="titulo">Cereal Snow 200g</h2>
+                    <div class="prd_pre">R$: 7,98</div>
+                    <img type="button" onclick="AddCarrinho('Cereal Snow 200g', '7.98', 51)" src="img/aa.png" alt="" class="comprar">
+                </div>
+            </section>
+
+            <section>
+
+                <div class="border_prod">
+                    <img class="img_prod" src="img/pepsi.png" alt="">
+                    <h2 class="titulo">Pepsi 500ml</h2>
+                    <div class="prd_pre">R$: 3,39</div>
+                    <img type="button" onclick="AddCarrinho('Pepsi 500ml', '3.39', 52)" src="img/aa.png" alt="" class="comprar">
+                </div>
+
+            </section>
+
+            <section>
+                <div class="border_prod">
+                    <img class="img_prod" src="img/guguti.png" alt="">
+                    <h2 class="titulo">Iog. Danone 1350ml</h2>
+                    <div class="prd_pre">R$: 7,98</div>
+                    <img type="button" onclick="AddCarrinho('Iog. Danone 1350ml', '7.98', 53)" src="img/aa.png" alt="" class="comprar">
+                </div>
+            </section>
+
+            <section>
+                <div class="border_prod">
+                    <img class="img_prod" src="img/nissim.png" alt="nissin">
+                    <h2 class="titulo">Nissin Lam. 120g</h2>
+                    <div class="prd_pre">R$: 1,98</div>
+                    <img type="button" onclick="AddCarrinho('Nissin Lam. 120g', ' 1.98', 54)" src="img/aa.png" alt="" class="comprar">
+                </div>
+            </section>
+
+            <section>
+                <div class="border_prod">
+                    <img class="img_prod" src="img/pipoca.png" alt="">
+                    <h2 class="titulo"> Pipoca Yoki 500g</h2>
+                    <div class="prd_pre">R$: 3,98</div>
+                    <img type="button" onclick="AddCarrinho('Pipoca Yoki 500g', '3.98', 55)" src="img/aa.png" alt="" class="comprar">
+                </div>
+            </section>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div id="contato">
+            <h2>Contato</h2>
+            <p>Telefone: 51 99999-9999</p>
+            <img src="img/face.png" alt="Logo Facebook" width="42px" height="42px">
+            <a href="https://www.instagram.com/jef_sorridente/"><img src="img/insta.jpg" width="50px" height="40px"></a>
+            <a href="https://www.contato@mercadoonline.com"><img src="img/gmail.jpg" width="53px" height="40px"></a>
+
+        </div>
+        <div id="atend">
+            <h2>Fale Conosco</h2>
+            <p>Perguntas frequentes</p>
+            <p>Área de atendimento</p>
+            <p>Comprar pelo telefone</p>
+        </div>
+        <div id="pagamento">
+            <h2>Formas de Pagamento</h2>
+            <p>Cartões de crédito</p>
+            <img src="img/hipercard.png" width="60px" height="35px">
+            <img src="img/MasterCard-Logo.png" width="60px" height="40px">
+            <img src="img/elo-logo.png" width="60px" height="35px">
+
+        </div>
+
+    </footer>
+    <script>
+         function AddCarrinho(produto, valor, posicao) {
+            localStorage.setItem("produto" + posicao, produto);
+            localStorage.setItem("valor" + posicao, valor);
+            alert("Produto adicionado ao carrinho!");
+        }
+    </script>
+</body>
+
+</html>

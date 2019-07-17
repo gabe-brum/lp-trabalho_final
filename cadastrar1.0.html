@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="style1.css">
+    <script></script>
+</head>
+
+<body>
+
+
+    <header>
+        <div id="menu">
+            <a href="pagina.1.0.html"> <img id="img1" src="img/logo site jeff.png" alt="logo"></a>
+
+
+            <ul>
+                <li id="list_menu"> <a class="list_menu_a" href="cadastrar1.0.html">Cadastrar</a></li>
+                <li id="list_menu"> <a class="list_menu_a" href="ajuda.html">Sobre Nos</a></li>
+            </ul>
+            <a onclick="carrinho()" href="carrinho.html"><img id="car_log" src="img/cesta.png"></a>
+        </div>
+
+
+    </header>
+
+    <main>
+
+        <div class="text_cad">
+            <h2>Seu Cadastro</h2>
+            <h4>Você precisa ser cadastrado ou já ter um cadastro para continuar..</h4>
+        </div>
+        <div class="div_p">
+            <div class="login">
+                <div class="text_p">
+                    <div class="text_h">Já é cadastrado?</div>
+                    <div class="text_t">Então entre com seus dados de login e senha.</div>
+                </div>
+                <div class="em_sen">
+                    <div class="cadast">
+                        <p>Email:</p>
+                        <input class="log_sen" placeholder="Email:" type="email" name="Email">
+                        <br>
+                        <p> Senha:</p>
+                        <input class="log_sen" placeholder="Senha" type="password" name="Senha">
+                        <br>
+                        <br>
+                        <input onclick="cadastrar()" class="log_sen" type="button" value="Login">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="div_p_log">
+            <div class="login">
+                <div class="text_p">
+                    <div class="text_h">Ainda Não?</div>
+                    <div class="text_t">Crie sua conta e aproveite nossas ofertas.</div>
+                </div>
+                <div class="em_sen">
+                    <div class="cadast">
+                        <p>Email:</p>
+                        <input class="log_sen" placeholder="Email:" type="email" name="Email" id="email">
+                        <br>
+                        <p> Senha:</p>
+                        <input class="log_sen" placeholder="Senha" type="password" name="Senha" id="">
+                        <br>
+                        <br>
+                        <input onclick="cadastrar()" class="log_sen" type="button" value="Cadastrar">
+                    </div>
+                    <div class="cadast">
+                        <p>Nome:</p>
+                        <input class="log_sen" placeholder="Nome:" type="text" name="nome" id="nome">
+                        <br>
+                        <p> Cpf:</p>
+                        <input class="log_sen" placeholder="Cpf" type="text" name="Cpf" id="cpf">
+                        <br>
+                        <br>
+                        <button class="log_sen" onclick="buscarCadastro()">Buscar</button>
+
+                        <a class="bsq" href="buscar.html">Buscar cadastro</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="contato">
+            <h2>Contato</h2>
+            <p>Telefone: 51 99999-9999</p>
+            <img src="img/face.png" alt="Logo Facebook" width="42px" height="42px">
+            <a href="https://www.instagram.com/jef_sorridente/"><img src="img/insta.jpg" width="50px" height="40px"></a>
+            <a href="https://www.contato@mercadoonline.com"><img src="img/gmail.jpg" width="53px" height="40px"></a>
+
+        </div>
+        <div id="atend">
+            <h2>Fale Conosco</h2>
+            <p>Perguntas frequentes</p>
+            <p>Área de atendimento</p>
+            <p>Comprar pelo telefone</p>
+        </div>
+        <div id="pagamento">
+            <h2>Formas de Pagamento</h2>
+            <p>Cartões de crédito</p>
+            <img src="img/hipercard.png" width="60px" height="35px">
+            <img src="img/MasterCard-Logo.png" width="60px" height="40px">
+            <img src="img/elo-logo.png" width="60px" height="35px">
+
+        </div>
+    </footer>
+    <script>
+        /*<script>
+            function AddCarrinho(produto, valor, posicao) {
+               localStorage.setItem("produto" + posicao, produto);
+               localStorage.setItem("valor" + posicao, valor);
+               alert("Produto adicionado ao carrinho!");
+           }*/
+        function cadastrar() {
+
+            if (typeof (Storage) != "undefined") {
+
+                if (localStorage.getItem("id") != "") {
+                    let id = localStorage.setItem("id", 1)
+                }
+
+                let nome = document.getElementById("nome").value
+                let cpf = parseInt(document.getElementById("cpf").value)
+                let email = document.getElementById("email").value
+
+
+
+                if (nome != "" && email != "") {
+
+                    let usuario = {
+                        _id: localStorage.getItem("id") + 1,
+                        _nome: nome,
+                        _idade: idade,
+                        _email: email
+                    }
+
+
+                    localStorage.setItem("usuario", JSON.stringify(usuario))
+                    document.getElementById("cadastro").innerHTML = "Cadastro efetuado com sucesso!"
+
+                } else {
+                    document.getElementById("cadastro").innerHTML = "Por favor, preencha todo os campos."
+                }
+            }
+        } 
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="js/JS.js"></script>
+</head>
+
+<body>
+
+
+    <header>
+        <div id="menu">
+            <a href="pagina.1.0.html"> <img id="img1" src="img/logo site jeff.png" alt="logo"></a>
+
+
+            <ul>
+                <li id="list_menu"> <a class="list_menu_a" href="cadastrar1.0.html">Cadastrar</a></li>
+                <li id="list_menu"> <a class="list_menu_a" href="ajuda.html">Sobre Nos</a></li>
+            </ul>
+            <a onclick="carrinho()" href="carrinho.html"><img id="car_log" src="img/cesta.png"></a>
+        </div>
+
+
+    </header>
+
+    <main>
+        <div class="ajuda">
+
+            <div class="carr">
+                <div id="itens"> </div>
+                <div>
+                    <p class="text">Total:</p>
+                    <span id="total" class="text"></span>
+                </div>
+                <img class="butaozin" src="./img/lixeira.png" onclick=" localStorage.clear(); location.reload();">
+                </button>
+                <br>
+                <button onclick="al()" class="fin">Finalizar Compra</button>
+            </div>
+
+
+            <script>
+                var total = 0;
+                var i = 0;
+                var valor = 0;
+
+                for (i = 1; i <= 99; i++) {
+                    var prod = localStorage.getItem("produto" + i + "");
+                    if (prod != null) {
+
+                        document.getElementById("itens").innerHTML += localStorage.getItem("produto" + i);
+                        document.getElementById("itens").innerHTML += " ";
+                        document.getElementById("itens").innerHTML += "R$: " + localStorage.getItem("valor" + i) + "<hr>";
+
+
+                        valor = parseFloat(localStorage.getItem("valor" + i));
+                        total = (total + valor);
+                    }
+                }
+
+                document.getElementById("total").innerHTML = total.toFixed(2); 
+            </script>
+
+
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div id="contato">
+            <h2>Contato</h2>
+            <p>Telefone: 51 99999-9999</p>
+            <img src="img/face.png" alt="Logo Facebook" width="42px" height="42px">
+            <a href="https://www.instagram.com/jef_sorridente/"><img src="img/insta.jpg" width="50px" height="40px"></a>
+            <a href="https://www.contato@mercadoonline.com"><img src="img/gmail.jpg" width="53px" height="40px"></a>
+
+        </div>
+        <div id="atend">
+            <h2>Fale Conosco</h2>
+            <p>Perguntas frequentes</p>
+            <p>Área de atendimento</p>
+            <p>Comprar pelo telefone</p>
+        </div>
+        <div id="pagamento">
+            <h2>Formas de Pagamento</h2>
+            <p>Cartões de crédito</p>
+            <img src="img/hipercard.png" width="60px" height="35px">
+            <img src="img/MasterCard-Logo.png" width="60px" height="40px">
+            <img src="img/elo-logo.png" width="60px" height="35px">
+
+        </div>
+    </footer>
+    <script>
+        function al() {
+            alert("Compra Finalizada!");
+
+        }
+    </script>
+</body>
+
+</html>
